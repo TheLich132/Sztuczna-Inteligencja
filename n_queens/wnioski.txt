@@ -1,0 +1,7 @@
+Algorytm DFS wykonuje się zwykle szybciej niż BFS. Dla zadania dodatkowego i 10 hetmanów jest to nawet różnica ~10 sekund. 
+Długości listy `Closed` są takie same dla obu algorytmów, ale maksymalna długość `Open` się różni, gdzie BFS może mieć dużo więcej stanów czekających na sprawdzenie niż DFS.
+Po implementacji zadania dodatkowego program jeszcze bardziej przyspieszył, gdzie program był w stanie wygenerować wynik dla 10 hetmanów używając algorytmu DFS w ~260 sekund.
+
+Pomysły na usprawnienie programu:
+Wydaję mi się że pod względem prędkości ten program w tym momencie jest już dobrze napisany by działał szybko. Można zobaczyć historię commitów, gdzie będą widoczne wszystkie zmiany by zoptymalizować program. 
+Ale żeby tą prędkość uzyskać trzeba było użyć pomocniczej tablicy dla `Open`, by wyszukiwanie było szybsze, co może powodować większe zużycie pamięci urządzenia. Na szczęście zapotrzebowanie na pamięć RAM nie jest aż tak duże, jak myślałem że będzie.

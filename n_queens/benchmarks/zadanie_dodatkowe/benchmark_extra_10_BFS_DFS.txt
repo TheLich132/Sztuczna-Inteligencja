@@ -1,0 +1,14 @@
+Benchmark extra dla 10-hetmanów:
+
+Algorytm: BFS
+Maksymalna długość listy open: 3628800
+Maksymalna długość listy closed: 9863376
+Liczba rozwiązanń: 724
+Czas: 275.766842997s
+
+
+Algorytm: DFS
+Maksymalna długość listy open: 46
+Maksymalna długość listy closed: 9863376
+Liczba rozwiązanń: 724
+Czas: 266.531541086s

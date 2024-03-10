@@ -1,0 +1,79 @@
+Opis eksperymentu:
+
+    Eksperymenty przeprowadzono dla problemu n-hetmanów, gdzie n przyjmuje wartości od 4 do 8.
+    Celem było porównanie wydajności rozwiązywania problemu z heurystyką oznaczonych jako H1, H2, H3, a rozwiązywaniem problemu tylko BFS i DFS.
+    Kryteriami porównawczymi były maksymalna długość listy open, maksymalna długość listy closed oraz czas wykonania algorytmu.
+    Algorytm dla każdego przypadku wykonywał się tylko do pierwszego znalezionego rozwiązania.
+
+Wyniki:
+Dla n = 4:
++----------+-----------+------------+----------------------+---------------+
+| Algorytm | Max open  | Max closed | Liczba rozwiązań     | Czas (ms)     |
++----------+-----------+------------+----------------------+---------------+
+| H1       | 9         | 35         | 1                    | 1.098274      |
+| H2       | 7         | 3          | 1                    | 0.149681      |
+| H3       | 8         | 36         | 1                    | 1.013903      |
+| BFS      | 24        | 50         | 1                    | 1.005284      |
+| DFS      | 7         | 29         | 1                    | 0.672132      |
++----------+-----------+------------+----------------------+---------------+
+
+
+Dla n = 5:
++----------+-----------+------------+----------------------+---------------+
+| Algorytm | Max open  | Max closed | Liczba rozwiązań     | Czas (ms)     |
++----------+-----------+------------+----------------------+---------------+
+| H1       | 16        | 7          | 1                    | 0.420942      |
+| H2       | 14        | 7          | 1                    | 0.324101      |
+| H3       | 18        | 10         | 1                    | 0.415442      |
+| BFS      | 120       | 215        | 1                    | 4.834065      |
+| DFS      | 11        | 30         | 1                    | 0.523352      |
++----------+-----------+------------+----------------------+---------------+
+
+
+Dla n = 6:
++----------+-----------+------------+----------------------+---------------+
+| Algorytm | Max open  | Max closed | Liczba rozwiązań     | Czas (ms)     |
++----------+-----------+------------+----------------------+---------------+
+| H1       | 89        | 354        | 1                    | 10.516884     |
+| H2       | 39        | 230        | 1                    | 6.823872      |
+| H3       | 104       | 481        | 1                    | 15.860341     |
+| BFS      | 720       | 1422       | 1                    | 37.180219     |
+| DFS      | 16        | 509        | 1                    | 9.022609      |
++----------+-----------+------------+----------------------+---------------+
+
+
+Dla n = 7:
++----------+-----------+------------+----------------------+---------------+
+| Algorytm | Max open  | Max closed | Liczba rozwiązań     | Czas (ms)     |
++----------+-----------+------------+----------------------+---------------+
+| H1       | 92        | 34         | 1                    | 2.063137      |
+| H2       | 82        | 31         | 1                    | 1.760716      |
+| H3       | 550       | 591        | 1                    | 24.996561     |
+| BFS      | 5040      | 8845       | 1                    | 101.051334    |
+| DFS      | 22        | 510        | 1                    | 5.047026      |
++----------+-----------+------------+----------------------+---------------+
+
+
+Dla n = 8:
++----------+-----------+------------+----------------------+---------------+
+| Algorytm | Max open  | Max closed | Liczba rozwiązań     | Czas (ms)     |
++----------+-----------+------------+----------------------+---------------+
+| H1       | 259       | 101        | 1                    | 5.635188      |
+| H2       | 95        | 26         | 1                    | 1.737055      |
+| H3       | 3860      | 5108       | 1                    | 132.560415    |
+| BFS      | 40320     | 72122      | 1                    | 722.874342    |
+| DFS      | 29        | 7729       | 1                    | 84.994333     |
++----------+-----------+------------+----------------------+---------------+
+
+
+Wnioski:
+Po przeanalizowaniu eksperymentu, można stwierdzić:
+
+    Algorytm z heurystyką H2 w większości przypadków wykazywał najkrótszy czas wykonania w porównaniu z innymi algorytmami dla rozmiarów problemu od 4 do 8.
+
+    Algorytm BFS miał znacznie dłuższy czas wykonania w porównaniu z innymi algorytmami dla większych rozmiarów problemu (n = 6, 7, 8).
+
+    Algorytmy z heurystyką H1 i H3 wykazywały wydajność zbliżoną do siebie przy małych rozmiarach problemu, przy czym algorytm H3 miał tendencję do wyższych wartości maksymalnej długości listy open i maksymalnej długości listy closed w porównaniu do H1. Przy większych rozmiarach problemu H3 potrzebuje dużo więcej czasu do wykonania (np. dla n = 11, H1 = 31.5 ms, H3 = 12.8 s)
+
+
+Na podstawie powyższych obserwacji można stwierdzić, że algorytm z heurystyką H2 w większości przypadków jest najbardziej efektywny w rozwiązywaniu problemu n-hetmanów dla testowanych rozmiarów problemu. Dawał on najlepsze czasy i najmniejszą ilość stanów w liście open i closed, co się przekłada na mniejsze zużycie pamięci RAM.

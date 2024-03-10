@@ -1,0 +1,14 @@
+Benchmark dla 4-hetmanów:
+
+Algorytm: BFS
+Maksymalna długość listy open: 1828
+Maksymalna długość listy closed: 2514
+Liczba rozwiązanń: 2
+Czas: 118.066818ms
+
+
+Algorytm: DFS
+Maksymalna długość listy open: 55
+Maksymalna długość listy closed: 2514
+Liczba rozwiązanń: 2
+Czas: 101.089534ms
